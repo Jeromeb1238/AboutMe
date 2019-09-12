@@ -152,4 +152,4 @@ while (numberGuesses < 5 && !correctGuess) {
 //   else if(i<7) {
 //    guess=prompt('make another guess')
 //    console.log('This is guessAgain ' + guess);
-//   }
+} 
