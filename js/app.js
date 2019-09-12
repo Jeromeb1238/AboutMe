@@ -109,34 +109,39 @@ var counter = 0
 // }
 
 
-// Question #2 guessing # of children
+// Question #6 guessing # of children
 var numberGuesses = 1
 var numberChildren = 6
 var userGuess = 0
 var correctGuess = false
 
-do{
+while (numberGuesses < 5 && !correctGuess) {
   userGuess = prompt('Guess # of children?');
-  if(userGuess != numberChildren){
-  console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
-  alert("Incorrect, try again");
-  numberGuesses++;
-  }else{
+  if (userGuess > numberChildren) {
+    console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
+    alert("Incorrect, too high");
+    numberGuesses++;
 
-  correctGuess=true
+  }  else if(userGuess < numberChildren) {
+    console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
+    alert("Incorrect, too low");
+    numberGuesses++;
+    
+  } else {
+    correctGuess = true
     alert('good job, you guessed correctly')
     counter++
   }
-}while(numberGuesses < 5 && correctGuess == false);
+// } if() {
 
+// }
+// ]
 
-
-// } while (numberGuesses < 5);
-
-// //Question #3
+// //Question #7 Guess the name
 // var names=['one','two','three','four','five']
 // var guess=prompt('Guess the name')
-// for(var i=0; i < names.length;i++) {
+
+// for(var i=0; i < names.length; i++) {
 //   console.log(names[i]); 
 //   console.log('This is guess ' + guess)
 // if(guess===names[i]){
@@ -146,4 +151,5 @@ do{
 // }
 //   else if(i<7) {
 //    guess=prompt('make another guess')
-  //  console.log('This is guessAgain ' + guess)
+//    console.log('This is guessAgain ' + guess);
+//   }
