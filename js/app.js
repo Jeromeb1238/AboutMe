@@ -1,98 +1,149 @@
 'use strict'
 
-console.log("Hello")
+var counter = 0
 
-var name = prompt('What is your name?');
-  console.log('Your name is ' + name);  
-  alert('Hello ' + name +  '.  I\'m going to ask you some questions that I discuss in my web page\.');
+// console.log("Hello")
 
-//Question #1 //
-  var growUp = prompt('Are you a native of Washington?');
+// var name = prompt('What is your name?');
 
-growUp = growUp.toLocaleUpperCase();
+// console.log('Your name is ' + name);
+// alert('Hello ' + name + '.  I\'m going to give you a short quiz About me');
 
-if(growUp == 'Y'|| growUp == 'YES'){
-  console.log('User entered yes');
-  alert('Awesome\, so am I\!');
-} 
-  else if(growUp == 'N' || growUp == 'NO'){
-    console.log('User entered no');
-    alert('That is okay, you\'ve come to an amazing place\.');
+// //Question #1 //
+// var growUp = prompt('Am I a native of Washington?');
+
+// growUp = growUp.toLocaleUpperCase();
+
+// if (growUp == 'Y' || growUp == 'YES') {
+//   console.log('User entered yes');
+//   alert('Yes\. I am a native of Washington');
+
+//   counter++;
+// }
+// else if (growUp == 'N' || growUp == 'NO') {
+//   console.log('Incorrect for native');
+//   alert('No');
+// }
+// else {
+//   console.log('Invalid response');
+//   alert('No response');
+// }
+
+
+// // Question # 2 //
+// var married = prompt('Am I married?');
+
+// married = married.toLocaleUpperCase();
+
+// if (married == 'Y' || married == 'YES') {
+//   console.log('Yes to married');
+//   alert('Yes\. I am a married');
+
+//   counter++;
+// }
+// else if (married == 'N' || married == 'NO') {
+//   console.log('Incorrect for married');
+//   alert('No');
+// }
+// else {
+//   console.log('Invalid response');
+//   alert('No response');
+// }
+
+// // Question # 3 //
+// var shoreline = prompt('Do I live in shoreline?');
+
+// shoreline = shoreline.toLocaleUpperCase();
+
+// if(shoreline == 'Y'|| shoreline == 'YES'){
+//   console.log('Yes for shoreline');
+//   alert('Yes, I live in shoreline');
+
+//   counter++;
+// } 
+//   else if(shoreline == 'N' || shoreline == 'NO'){
+//     console.log('Incorrect for shoreline');
+//     alert('Incorrect, I live in shoreline');
+//   }
+//   else{
+//     console.log('No response shoreline');
+//     alert('No response shoreline');
+// }
+
+// // Question # 4 //
+// var army = prompt('Was I in the army?');
+
+// army = army.toLocaleUpperCase();
+
+// if(army == 'Y'|| army == 'YES'){
+//   console.log('Yes for Army');
+//   alert('Yes, I was in the Army');
+//   counter++;
+// } 
+//   else if(army == 'N' || army == 'NO'){
+//     console.log('Incorrect for Army');
+//     alert('Incorrect, I was in the Army');
+//   }
+//   else{
+//     console.log('No response Army');
+//     alert('No response Army');
+// }
+
+// // Question #5 //
+// var pets = prompt('Do you have any pets?');
+
+// pets = pets.toLocaleUpperCase();
+
+// if(pets == 'Y'|| pets == 'YES'){
+//   console.log('User has pets');
+//   alert('Are family loves pets too\.');
+//   counter++;
+// } 
+//     else if(pets == 'N' || pets == 'NO'){
+//     console.log('Incorrect for pets');
+//     alert('Incorrect, I do have pets');
+//   }
+//   else{
+//     console.log('No response pets');
+//     alert('No response');
+// }
+
+
+// Question #2 guessing # of children
+var numberGuesses = 1
+var numberChildren = 6
+var userGuess = 0
+var correctGuess = false
+
+do{
+  userGuess = prompt('Guess # of children?');
+  if(userGuess != numberChildren){
+  console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
+  alert("Incorrect, try again");
+  numberGuesses++;
+  }else{
+
+  correctGuess=true
+    alert('good job, you guessed correctly')
+    counter++
   }
-  else{
-    console.log('Invalid response on native');
-    alert('No response');
-}
+}while(numberGuesses < 5 && correctGuess == false);
 
-// Question # 2 //
-var seattle = prompt('Do you live in Seattle?');
 
-seattle = seattle.toLocaleUpperCase();
 
-if(seattle == 'Y'|| seattle == 'YES'){
-  console.log('User lives in Seattle');
-  alert('\'Yes\'\, you live in Seattle.  It is a beautiful city\.');
-} 
-  else if(seattle == 'N' || seattle == 'NO'){
-    console.log('User does not live in Seattle');
-    alert('I hope you don\'t have a long commute\.');
-  }
-  else{
-    console.log('No seattle response');
-    alert('No response');
-}
+// } while (numberGuesses < 5);
 
-// Question # 3 //
-var children = prompt('Any children?');
-
-children = children.toLocaleUpperCase();
-
-if(children == 'Y'|| children == 'YES'){
-  console.log('User entered yes');
-  alert('I also have children.');
-} 
-  else if(children == 'N' || children == 'NO'){
-    console.log('User entered no');
-    alert('No children.  I dream of those days; sometimes\.');
-  }
-  else{
-    console.log('No children response');
-    alert('No response');
-}
-
-// Question #4 //
-var seaHawk = prompt('Are you a Seahawk fan?');
-
-seaHawk = seaHawk.toLocaleUpperCase();
-
-if(seaHawk == 'Y'|| seaHawk == 'YES'){
-  console.log('User is a SeaHawk fan');
-  alert('I am a Seahawk fan also\.  How could one not!');
-} 
-  else if(seaHawk == 'N' || seaHawk == 'NO'){
-    console.log('User is not a fan');
-
-    alert('What, how is this possible?  Russel Wilson?');
-  }
-  else{
-    console.log('Not a Seahawks fan');
-    alert('No comment');
-}
-
-// Question #5 //
-var pets = prompt('Do you have any pets?');
-
-pets = pets.toLocaleUpperCase();
-
-if(pets == 'Y'|| pets == 'YES'){
-  console.log('User has pets');
-  alert('Are family loves pets too\.');
-} 
-  else if(pets == 'N' || pets == 'NO'){
-    console.log('User has no pets');
-    alert('No pets');
-  }
-  else{
-    console.log('No pets');
-    alert('None specified');
-}
+// //Question #3
+// var names=['one','two','three','four','five']
+// var guess=prompt('Guess the name')
+// for(var i=0; i < names.length;i++) {
+//   console.log(names[i]); 
+//   console.log('This is guess ' + guess)
+// if(guess===names[i]){
+//   alert("yes it is " + guess);
+//   counter++
+//   break;
+// }
+//   else if(i<7) {
+//    guess=prompt('make another guess')
+  //  console.log('This is guessAgain ' + guess)
