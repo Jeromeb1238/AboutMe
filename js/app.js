@@ -73,23 +73,28 @@ else {
 //Question 6 of quiz is a loop to guess # of children
 alert ('This next question gives 4 tries to guess how many children I have.');
 var numGuesses = 0;
-var numChildren = 6;
+numChildren = 6
 isCorrect = false;
 
 while (numGuesses < 4 && !isCorrect) {
-  var answer = prompt('Guess how many children')
-  if (answer === numChildren) {
-  alert ('Yes, that is correct, I have ' + numChildren + 'children.');
-  isCorrect = true;
-  counter++
-  }
-  else if (answer < numChildren) {
-    alert ('Too low');
-    numGuesses++
-  }
-  else if (answer > numChildren) {
-    alert ('Too high');
-    numGuesses++
+  console.log (numGuesses,isCorrect);
+  var answer = parseInt(prompt('Guess how many children'));
+  if (!isNaN(answer)) {
+    if (answer === numChildren) {
+      console.log (answer);
+      alert ('Yes, that is correct, I have numChildren children.');
+      isCorrect = true;
+      console.log (numGuesses,isCorrect);
+      counter++
+    }
+    else if (answer < numChildren) {
+      alert ('Too low');
+      numGuesses++
+    }
+    else if (answer > numChildren) {
+      alert ('Too high');
+      numGuesses++
+    }
   }
 }
 if (numGuesses >= 4) {
