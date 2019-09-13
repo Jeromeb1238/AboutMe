@@ -1,182 +1,100 @@
-'use strict'
-
+// 'use strict'
 var counter = 0
+// var name = prompt('Hello, what is your name?');
+// console.log('Hello ' + name);
 
-console.log("Hello")
+// Question 1 of Quiz
+var native = prompt('Am I a native of Washington?');
 
-var name = prompt('What is your name?');
-
-console.log('Your name is ' + name);
-alert('Hello ' + name + '.  I\'m going to give you a short quiz About me');
-
-
-
-
-
-
-
-//Question #1 //
-
-
-
-function questionNumber(question) {
-
-  if (question === 1) {
-
-
-    var growUp = prompt('Am I a native of Washington?');
-    growUp = growUp.toLocaleUpperCase();
-
-    if (growUp == 'Y' || growUp == 'YES') {
-      console.log('User entered yes');
-      alert('Yes\. I am a native of Washington');
-
-      counter++;
-    }
-    else if (growUp == 'N' || growUp == 'NO') {
-      console.log('Incorrect for native');
-      alert('No');
-    }
-    else {
-      console.log('Invalid response');
-      alert('No response');
-    }
-  }
-
-  if (question === 2) {
-    //question 2
-    var married = prompt('Am I married?');
-
-    married = married.toLocaleUpperCase();
-
-    if (married == 'Y' || married == 'YES') {
-      console.log('Yes to married');
-      alert('Yes\. I am a married');
-
-      counter++;
-    }
-    else if (married == 'N' || married == 'NO') {
-      console.log('Incorrect for married');
-      alert('No');
-    }
-    else {
-      console.log('Invalid response');
-      alert('No response');
-    }
-  }
-  if (question === 3) {
-    // Question # 3 //
-    var shoreline = prompt('Do I live in shoreline?');
-
-    shoreline = shoreline.toLocaleUpperCase();
-
-    if (shoreline == 'Y' || shoreline == 'YES') {
-      console.log('Yes for shoreline');
-      alert('Yes, I live in shoreline');
-
-      counter++;
-    }
-    else if (shoreline == 'N' || shoreline == 'NO') {
-      console.log('Incorrect for shoreline');
-      alert('Incorrect, I live in shoreline');
-    }
-    else {
-      console.log('No response shoreline');
-      alert('No response shoreline');
-    }
-  }
-
-  if (question === 4) {
-
-    // Question # 4 //
-    var army = prompt('Was I in the army?');
-
-    army = army.toLocaleUpperCase();
-
-    if (army == 'Y' || army == 'YES') {
-      console.log('Yes for Army');
-      alert('Yes, I was in the Army');
-      counter++;
-    }
-    else if (army == 'N' || army == 'NO') {
-      console.log('Incorrect for Army');
-      alert('Incorrect, I was in the Army');
-    }
-    else {
-      console.log('No response Army');
-      alert('No response Army');
-    }
-  }
-  if (question === 5) {
-    // Question #5 //
-    var pets = prompt('Do you have any pets?');
-
-    pets = pets.toLocaleUpperCase();
-
-    if (pets == 'Y' || pets == 'YES') {
-      console.log('User has pets');
-      alert('Are family loves pets too\.');
-      counter++;
-    }
-    else if (pets == 'N' || pets == 'NO') {
-      console.log('Incorrect for pets');
-      alert('Incorrect, I do have pets');
-    }
-    else {
-      console.log('No response pets');
-      alert('No response');
-    }
-  }
-
+if (native.toUpperCase() == 'Y' || native.toUpperCase() == 'YES') {
+  alert('Yes, I am a native of Washington');
+  counter++;
+}
+else if (native.toUpperCase() == 'N' || native.toUpperCase()== 'NO') {
+  alert('Incorrect, I am a native of WA');
+}
+else { 
+  alert('No answer');
 }
 
+// Question 4 of Quiz
+var married = prompt('Am I a married?');
 
+if (married.toUpperCase() == 'Y' || married.toUpperCase() == 'YES') {
+  alert('Yes, I am married');
+  counter++;
+}
+else if (married.toUpperCase() == 'N' || married.toUpperCase()== 'NO') {
+  alert('Incorrect, I am married');
+}
+else { 
+  alert('No answer');
+}
+// Question 3 of Quiz
+var pets = prompt('Do I have pets?');
 
+if (pets.toUpperCase() == 'Y' || pets.toUpperCase() == 'YES') {
+  alert('Yes, I pets');
+  counter++;
+}
+else if (pets.toUpperCase() == 'N' || pets.toUpperCase()== 'NO') {
+  alert('Incorrect, I do have pets');
+}
+else { 
+  alert('No answer');
+}
+// Question 4 of Quiz
+var shoreline = prompt('Do I live in Shoreline?');
 
+if (shoreline.toUpperCase() == 'Y' || shoreline.toUpperCase() == 'YES') {
+  alert('Yes, I live in Shoreline');
+  counter++;
+}
+else if (shoreline.toUpperCase() == 'N' || shoreline.toUpperCase()== 'NO') {
+  alert('Incorrect, I live in Shoreline');
+}
+else { 
+  alert('No answer');
+}
+// Question 5 of Quiz
+var chef = prompt('Was I a chef?');
 
+if (chef.toUpperCase() == 'Y' || chef.toUpperCase() == 'YES') {
+  alert('Incorrect, I was not a chef');
+}
+else if (chef.toUpperCase() == 'N' || chef.toUpperCase()== 'NO') {
+  alert('Correct, I was not a chef');
+  counter++
+}
+else { 
+  alert('No answer');
+}
 
+//Question 6 of quiz is a loop to guess # of children
+alert ('This next question gives 4 tries to guess how many children I have.');
+var numGuesses = 0;
+var numChildren = 6;
+isCorrect = false;
 
-//Question #6 guessing # of children
-var numberGuesses = 1
-var numberChildren = 6
-var userGuess = 0
-var correctGuess = false
-
-while (numberGuesses < 5 && !correctGuess) {
-  userGuess = prompt('Guess # of children?');
-  if (userGuess > numberChildren) {
-    console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
-    alert("Incorrect, too high");
-    numberGuesses++;
-
-  } else if (userGuess < numberChildren) {
-    console.log('guess # ' + numberGuesses + '\.  User\'s guess is ' + userGuess);
-    alert("Incorrect, too low");
-    numberGuesses++;
-
-  } else {
-    correctGuess = true
-    alert('good job, you guessed correctly')
-    counter++
+while (numGuesses < 4 && !isCorrect) {
+  var answer = prompt('Guess how many children')
+  if (answer === numChildren) {
+  alert ('Yes, that is correct, I have ' + numChildren + 'children.');
+  isCorrect = true;
+  counter++
   }
-  // } if() {
+  else if (answer < numChildren) {
+    alert ('Too low');
+    numGuesses++
+  }
+  else if (answer > numChildren) {
+    alert ('Too high');
+    numGuesses++
+  }
+}
+if (numGuesses >= 4) {
+  alert ('That was 4 guesses, I have 6 children');
+}
+alert ('Score is ' + counter);
 
-  // }
-  // ]
 
-  // //Question #7 Guess the name
-  // var names=['one','two','three','four','five']
-  // var guess=prompt('Guess the name')
-
-  // for(var i=0; i < names.length; i++) {
-  //   console.log(names[i]); 
-  //   console.log('This is guess ' + guess)
-  // if(guess===names[i]){
-  //   alert("yes it is " + guess);
-  //   counter++
-  //   break;
-  // }
-  //   else if(i<7) {
-  //    guess=prompt('make another guess')
-  //    console.log('This is guessAgain ' + guess);
-} 
